@@ -1,0 +1,222 @@
+.chat {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid #dddddd35;
+    border-right: 1px solid #dddddd35;
+    height: 100%;
+}
+
+.chat .top {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #dddddd35;
+}
+
+.chat .top .user {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.chat .top .user img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.chat .top .user .texts {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.chat .top .user .texts span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.chat .top .user .texts p {
+    font-size: 14px;
+    font-weight: 300;
+    color: #a5a5a5;
+}
+
+.chat .top .icons {
+    display: flex;
+    gap: 20px;
+}
+
+.chat .top .icons img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.chat .center {
+    padding: 20px;
+    flex: 1;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.chat .center .message {
+    max-width: 70%;
+    display: flex;
+    gap: 20px;
+}
+
+.chat .center .message img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.chat .center .message .texts {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.chat .center .message .texts img {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.chat .center .message .texts p {
+    padding: 20px;
+    background-color: rgba(17, 25, 40, 0.3);
+    border-radius: 10px;
+}
+
+.chat .center .message .texts span {
+    font-size: 13px;
+}
+
+.chat .center .message.own {
+    align-self: flex-end;
+}
+
+.chat .center .message.own .texts p {
+    background-color: #5193fe;
+}
+
+.chat .imageToSend {
+    position: absolute;
+    height: 230px;
+    border: 3px solid #dddddd50;
+    border-bottom: none;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: rgba(17, 25, 40, 0.5);
+    bottom: 81px;
+}
+
+.chat .imageToSend .closeMark {
+    width: 20px;
+    height: 20px;
+    background-color: rgba(17, 25, 40);
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: 5px;
+    cursor: pointer;
+}
+
+.chat .imageToSend .texts img {
+    height: 200px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 10px;
+    object-fit: cover;
+}
+
+.chat .bottom {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #dddddd35;
+    gap: 20px;
+    margin-top: auto;
+}
+
+.chat .bottom .icons {
+    gap: 20px;
+    display: flex;
+}
+
+.chat .bottom img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.chat .bottom form {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.chat .bottom form .textBox {
+    flex: 1;
+    background-color: rgba(17, 25, 40, 0.5);
+    padding: 20px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 16px;
+}
+
+.chat .bottom form .imageTextBox {
+    flex: 1;
+    background-color: rgba(17, 25, 40, 0.5);
+    border: 3px solid #dddddd50;
+    border-top: none;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding: 20px;
+    outline: none;
+    color: white;
+    font-size: 16px;
+}
+
+.chat .bottom form input:disabled {
+    cursor: not-allowed;
+}
+
+.chat .bottom form .sendButton {
+    background-color: #5183fe;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.chat .bottom form .emoji {
+    position: relative;
+}
+
+.chat .bottom form .emoji .picker {
+    position: absolute;
+    bottom: 50px;
+    right: 10px;
+}
+
+.chat .bottom form .sendButton:disabled {
+    background-color: #5182feb4;
+    cursor: not-allowed;
+}
